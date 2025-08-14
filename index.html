@@ -2,13 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Q Business Trial Embed</title>
+  <title>Q Business Chatbot</title>
   <style>
-    body, html { height: 10%; margin: 0; }
-    iframe { width: 10%; height: 100%; border: none; }
+    /* Make page full height */
+    body, html { height: 100%; margin: 0; }
+
+    /* Fixed small chatbot box in bottom-right */
+    #chatbot-frame {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;  /* width of chat box */
+      height: 400px; /* height of chat box */
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      z-index: 9999;
+    }
   </style>
 </head>
 <body>
-  <iframe src="https://pogisxu0.chat.qbusiness.ap-southeast-2.on.aws/" title="Q Business Assistant"></iframe>
+  <iframe id="chatbot-frame" src="https://pogisxu0.chat.qbusiness.ap-southeast-2.on.aws/" title="Q Business Assistant"></iframe>
 </body>
 </html>
